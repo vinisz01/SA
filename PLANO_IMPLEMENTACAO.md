@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # SA_ferrorama_FastRail
 **Seção 1 — Identificação e visão geral**
 
