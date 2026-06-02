@@ -41,13 +41,12 @@ body {
 .grupo input {
     width: 100%;
     padding: 12px 10px;
-    background: #720101;
-    border: 1px solid #d1d5db;
+    border: 2px solid #720101;
     border-radius: 20px;
     outline: none;
     font-size: 16px;
     transition: 0.3s;
-    color: white;
+    color: black;
 }
 
 .grupo label {
