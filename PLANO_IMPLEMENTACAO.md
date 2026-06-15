@@ -163,3 +163,4 @@ Processo de Trabalho (Git & Qualidade)
 [ ] Code Review: Código revisado, testado e aprovado por pelo menos um outro integrante do grupo antes da mesclagem.
 
 [ ] Boas Práticas de Commit: Alterações salvas no repositório com mensagens de commit claras, curtas e descritivas (ex: feat: adiciona responsividade à tela de login).
+
