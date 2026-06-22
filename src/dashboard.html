@@ -9,7 +9,282 @@
 </head>
 <body>
     
-  
+  <!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>FastRail — Dashboard</title>
+  <link rel="stylesheet" href="css/global.css" />
+  <style>
+    body { background: #fff; }
+ 
+    .dash-wrap {
+      max-width: 900px;
+      margin: 0 auto;
+      padding: 24px 20px 100px;
+    }
+ 
+    /* Cabeçalho */
+    .dash-header {
+      display: flex;
+      align-items: center;
+      gap: 14px;
+      margin-bottom: 30px;
+    }
+    .dash-header a { color: #000; font-size: 26px; }
+    .dash-header h1 {
+      font-size: 36px;
+      font-weight: 800;
+      color: #720101;
+    }
+ 
+    /* Layout em duas colunas */
+    .dash-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 32px;
+    }
+ 
+    .dash-section {
+      margin-bottom: 28px;
+    }
+ 
+    .dash-section h2 {
+      font-size: 16px;
+      font-weight: 800;
+      letter-spacing: 0.5px;
+      margin-bottom: 12px;
+      color: #1a1a1a;
+    }
+ 
+    /* Caixas vermelhas - Estado da frota */
+    .frota-row {
+      display: flex;
+      gap: 10px;
+    }
+    .frota-box {
+      background: #720101;
+      color: #fff;
+      border-radius: 10px;
+      padding: 16px 14px;
+      flex: 1;
+      text-align: center;
+    }
+    .frota-box .num {
+      font-size: 26px;
+      font-weight: 800;
+      line-height: 1;
+    }
+    .frota-box .label {
+      font-size: 11px;
+      font-weight: 700;
+      margin-top: 4px;
+    }
+ 
+    /* Alerta */
+    .alerta-box {
+      background: #e8a1a1;
+      border-radius: 10px;
+      padding: 16px;
+      text-align: center;
+    }
+    .alerta-box .titulo {
+      color: #b32020;
+      font-weight: 800;
+      font-size: 16px;
+    }
+    .alerta-box .detalhe {
+      color: #b32020;
+      font-size: 13px;
+      font-weight: 600;
+      margin-top: 2px;
+    }
+ 
+    /* Indicadores em destaque */
+    .indicadores-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 10px;
+    }
+    .indicador-box {
+      background: #e5e5e5;
+      border-radius: 10px;
+      padding: 16px;
+      text-align: center;
+    }
+    .indicador-box .num {
+      font-size: 22px;
+      font-weight: 800;
+      color: #720101;
+    }
+    .indicador-box .num span {
+      font-size: 13px;
+      font-weight: 600;
+    }
+    .indicador-box .label {
+      font-size: 12px;
+      color: #1a1a1a;
+      margin-top: 2px;
+    }
+ 
+    /* Sensores */
+    .sensores-box {
+      background: #e5e5e5;
+      border-radius: 10px;
+      padding: 16px;
+    }
+    .sensores-box h3 {
+      font-size: 15px;
+      font-weight: 800;
+      margin-bottom: 12px;
+      color: #1a1a1a;
+    }
+    .sensor-item {
+      display: flex;
+      justify-content: space-between;
+      padding: 6px 0;
+      font-size: 13px;
+    }
+    .sensor-item .nome { color: #1a1a1a; }
+    .sensor-item .valor { color: #c0392b; font-weight: 700; }
+ 
+    /* Menu inferior */
+    .dash-menu {
+      display: flex;
+      justify-content: space-around;
+      margin-top: 40px;
+    }
+    .dash-menu a {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 6px;
+      color: #000;
+      font-size: 13px;
+      font-weight: 600;
+    }
+    .dash-menu svg { width: 26px; height: 26px; }
+ 
+    /* Responsivo - empilha em telas pequenas */
+    @media (max-width: 640px) {
+      .dash-grid { grid-template-columns: 1fr; gap: 0; }
+      .dash-header h1 { font-size: 28px; }
+    }
+  </style>
+</head>
+<body>
+  <div class="dash-wrap">
+ 
+    <div class="dash-header">
+      <a href="bemvindo.html">←</a>
+      <h1>Dashboard Geral</h1>
+    </div>
+ 
+    <div class="dash-grid">
+ 
+      <!-- COLUNA ESQUERDA -->
+      <div>
+        <div class="dash-section">
+          <h2>ESTADO DA FROTA</h2>
+          <div class="frota-row">
+            <div class="frota-box">
+              <div class="num">14</div>
+              <div class="label">ATIVOS</div>
+            </div>
+            <div class="frota-box">
+              <div class="num">3</div>
+              <div class="label">MANUTENÇÃO</div>
+            </div>
+            <div class="frota-box">
+              <div class="num">2</div>
+              <div class="label">PARADOS</div>
+            </div>
+          </div>
+        </div>
+ 
+        <div class="dash-section">
+          <h2>INDICADORES EM DESTAQUE</h2>
+          <div class="indicadores-grid">
+            <div class="indicador-box">
+              <div class="num">87 <span>km/h</span></div>
+              <div class="label">Velocidade Média</div>
+            </div>
+            <div class="indicador-box">
+              <div class="num">7</div>
+              <div class="label">Alertas ativos</div>
+            </div>
+            <div class="indicador-box">
+              <div class="num">4</div>
+              <div class="label">Leituras Críticas</div>
+            </div>
+            <div class="indicador-box">
+              <div class="num">96</div>
+              <div class="label">Eficiência geral</div>
+            </div>
+          </div>
+        </div>
+      </div>
+ 
+      <!-- COLUNA DIREITA -->
+      <div>
+        <div class="dash-section">
+          <h2>ALERTAS</h2>
+          <div class="alerta-box">
+            <div class="titulo">Superaquecimento - Trem 07</div>
+            <div class="detalhe">Motor traseiro - 142 °C</div>
+          </div>
+        </div>
+ 
+        <div class="dash-section">
+          <h2>SENSORES</h2>
+          <div class="sensores-box">
+            <h3>Sensores com leitura crítica</h3>
+            <div class="sensor-item">
+              <span class="nome">Temp. motor T07</span>
+              <span class="valor">142 °C</span>
+            </div>
+            <div class="sensor-item">
+              <span class="nome">Pressão rodas T12</span>
+              <span class="valor">6.8 bar</span>
+            </div>
+            <div class="sensor-item">
+              <span class="nome">Vibração eixo T03</span>
+              <span class="valor">4.2 mm/s</span>
+            </div>
+            <div class="sensor-item">
+              <span class="nome">Vel. média T09</span>
+              <span class="valor">91 km/h</span>
+            </div>
+          </div>
+        </div>
+      </div>
+ 
+    </div>
+ 
+    <!-- Menu inferior -->
+    <div class="dash-menu">
+      <a href="trens.html">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 16V8a1 1 0 011-1h9l4 4v5a1 1 0 01-1 1H4a1 1 0 01-1-1z"/><circle cx="7.5" cy="17.5" r="1.5"/><circle cx="16.5" cy="17.5" r="1.5"/></svg>
+        Trens
+      </a>
+      <a href="sensores.html">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 8a6 6 0 10-12 0c0 7-3 9-3 9h18s-3-2-3-9"/><path d="M13.73 21a2 2 0 01-3.46 0"/></svg>
+        Sensores
+      </a>
+      <a href="relatorios.html">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8z"/><path d="M14 2v6h6"/></svg>
+        Relatórios
+      </a>
+      <a href="funcionarios.html">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="4" y="3" width="16" height="18" rx="2"/><circle cx="12" cy="10" r="3"/><path d="M7 18c0-2.5 2-4 5-4s5 1.5 5 4"/></svg>
+        Funcionários
+      </a>
+    </div>
+ 
+  </div>
+</body>
+</html>
     
 </body>
 </html>
