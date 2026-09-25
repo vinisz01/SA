@@ -1,0 +1,30 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Login</title>
+    <link rel="stylesheet" href="adicionar_sensor.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  </head>
+  <body>
+    <div class="pilha">
+        <div class="titulo">
+            <h2>Adicionar Sensor</h2>
+        </div>
+        <div class="modulo">
+            <div class="bloco1">
+                <div class="texto">
+                    <p>Preencha os dados do sensor para <br> adiciona-los</p>
+                </div>
+        </div>
+        <div class="bloco2">
+            <form action="adicionar_sensor.php" method="POST">
+                <div class="input-container">
+                    <i class="fa-solid fa-microchip"></i>
+                    <input type="text" name="sensor" placeholder="Digite o nome do sensor" required />
+                </div>
+                <button type="submit">Adicionar</button>
+            </form>
+    </div>
+  </body>

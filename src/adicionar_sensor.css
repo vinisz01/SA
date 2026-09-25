@@ -1,0 +1,32 @@
+.modulo{
+    display: block;
+}
+
+.bloco1{
+    border-radius: 12px;
+    background-color: #ffffff;
+    width: 600px;
+    height: 40px;
+    padding: 15px;
+    margin: 100px auto 0;
+    border: 2px solid red;
+    text-align: center;
+}
+
+.texto{
+    font-size: 25px;
+    color: #000000;
+    margin-top: -35px;
+  font-family: sans-serif;
+  font-weight: 600;
+}
+
+
+.bloco2{
+    border-radius: 12px;
+    background-color: #880000;
+    width: 600px;
+    height: 400px;
+    padding: 15px;
+    margin: 10px auto 0;
+}
